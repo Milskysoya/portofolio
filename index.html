@@ -4,94 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Cybersecurity Terminal</title>
+    <title>Velasco Dendy — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="scanline"></div>
     <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="profile-container">
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-inner">
                 <img src="profile.jpg" alt="Velasco Dendy" class="profile-img">
+                <div class="hero-text">
+                    <p class="eyebrow">Undergraduate student</p>
+                    <h1>Velasco Dendy</h1>
+                    <p class="hero-sub">Electrical Engineering · Universitas Brawijaya</p>
+                    <p class="hero-desc">Tertarik pada dunia cybersecurity, jaringan, dan sistem operasi Linux. Suka eksperimen dengan kode untuk memahami cara kerja sistem di balik layar.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/velxrch_/" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://www.linkedin.com/in/velasco-dendy-068736360" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/Milskysoya" target="_blank" class="social-link">GitHub</a>
+                    </div>
+                </div>
             </div>
-            <h1 id="typing-title"></h1><span class="cursor">█</span>
-            <p class="subtitle">Electrical Engineering | Cybersecurity Enthusiast</p>
         </header>
 
-        <!-- Interactive Terminal -->
-        <section id="interactive-terminal" class="terminal-section">
-            <h2 class="section-title"> > ./interactive_console</h2>
-            <div class="terminal-window">
-                <div id="terminal-output">
-                    <p class="terminal-line">Welcome to Pixel Cyber Terminal v1.0. Type 'help' to see available
-                        commands.</p>
+        <main>
+            <!-- Skills -->
+            <section class="section" id="skills">
+                <h2 class="section-label">Skills</h2>
+                <div class="skill-tags">
+                    <span class="tag">Cybersecurity</span>
+                    <span class="tag">Networking</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Kali Linux</span>
+                    <span class="tag">Arch Linux</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Web Security</span>
                 </div>
-                <div class="input-line">
-                    <span class="prompt-user">guest@pixel-cyber:~$</span>
-                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- About Me -->
-        <section id="about" class="terminal-section">
-            <h2 class="section-title">> ./about_me.sh</h2>
-            <div class="terminal-content">
-                <p>
-                    Saya adalah Undergraduate Electrical Engineering student at Universitas Brawijaya.
-                    Memiliki ketertarikan mendalam pada dunia Cybersecurity, Networking, dan Technology.
-                    Saat ini saya sedang fokus mempelajari sistem operasi Linux (terutama Arch dan Kali)
-                    serta mendalami konsep keamanan sistem jaringan. Saya senang bereksperimen dengan
-                    kode dan script untuk memahami bagaimana sistem bekerja di balik layar.
-                </p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/velxrch_/" target="_blank" class="terminal-link">[ Instagram
-                        ]</a>
-                    <a href="https://www.linkedin.com/in/velasco-dendy-068736360" target="_blank"
-                        class="terminal-link">[ LinkedIn ]</a>
-                    <a href="https://github.com/Milskysoya" target="_blank" class="terminal-link">[ GitHub ]</a>
+            <!-- Projects -->
+            <section class="section" id="projects">
+                <h2 class="section-label">Projects</h2>
+                <div class="project-list">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>Packet Sniffer Tool</h3>
+                            <span class="project-lang">Python</span>
+                        </div>
+                        <p>Script untuk menganalisis lalu lintas jaringan lokal dan mendeteksi anomali pada paket data.</p>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-header">
+                            <h3>IoT Secure Gateway</h3>
+                            <span class="project-lang">Linux · IoT</span>
+                        </div>
+                        <p>Implementasi keamanan dasar pada perangkat IoT menggunakan enkripsi MQTT dan firewall berbasis Linux.</p>
+                    </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Skills -->
-        <section id="skills" class="terminal-section">
-            <h2 class="section-title">> ./cat skills.txt</h2>
-            <div class="grid-container">
-                <div class="pixel-card">Cybersecurity Basics</div>
-                <div class="pixel-card">Networking</div>
-                <div class="pixel-card">Linux</div>
-                <div class="pixel-card">Kali Linux</div>
-                <div class="pixel-card">Arch Linux</div>
-                <div class="pixel-card">Python</div>
-                <div class="pixel-card">Web Security</div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="terminal-section">
-            <h2 class="section-title">> ./list_projects.py</h2>
-            <div class="grid-container">
-                <div class="project-card">
-                    <h3>[ Packet Sniffer Tool ]</h3>
-                    <p>Sebuah script Python sederhana untuk menganalisis lalu lintas jaringan lokal dan mendeteksi
-                        anomali paket data.</p>
+            <!-- Terminal -->
+            <section class="section" id="terminal">
+                <h2 class="section-label">Terminal</h2>
+                <div class="terminal-window">
+                    <div class="terminal-bar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="terminal-title">bash</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div id="terminal-output">
+                            <p class="t-line dim">Type <span class="t-cmd">help</span> to see available commands.</p>
+                        </div>
+                        <div class="input-row">
+                            <span class="prompt">velasco@portfolio:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>[ IoT Secure Gateway ]</h3>
-                    <p>Implementasi keamanan dasar pada perangkat IoT menggunakan enkripsi MQTT dan firewall berbasis
-                        Linux.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Footer -->
         <footer>
-            <p>© 2025 Pixel Cyber Portfolio</p>
-            <p class="access-granted">Access Granted ✔</p>
+            <p>© 2025 Velasco Dendy</p>
         </footer>
     </div>
 
