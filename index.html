@@ -1,78 +1,563 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velasco Dendy — Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velasco Dendy — Electrical Engineering Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
 
-        <!-- Hero -->
-        <header class="hero">
-            <div class="hero-inner">
-                <img src="profile.jpg" alt="Velasco Dendy" class="profile-img">
-                <div class="hero-text">
-                    <p class="eyebrow">Undergraduate student</p>
-                    <h1>Velasco Dendy</h1>
-                    <p class="hero-sub">Electrical Engineering · Universitas Brawijaya</p>
-                    <p class="hero-desc">Tertarik pada dunia cybersecurity, jaringan, dan sistem operasi Linux. Suka eksperimen dengan kode untuk memahami cara kerja sistem di balik layar.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/velxrch_/" target="_blank" class="social-link">Instagram</a>
-                        <a href="https://www.linkedin.com/in/velasco-dendy-068736360" target="_blank" class="social-link">LinkedIn</a>
-                        <a href="https://github.com/Milskysoya" target="_blank" class="social-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+<!-- ── NAVIGATION ─────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="nav-logo">velasco.dev</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-        <main>
-            <!-- Skills -->
-            <section class="section" id="skills">
-                <h2 class="section-label">Skills</h2>
-                <div class="skill-tags">
-                    <span class="tag">Cybersecurity</span>
-                    <span class="tag">Networking</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">Kali Linux</span>
-                    <span class="tag">Arch Linux</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Web Security</span>
-                </div>
-            </section>
+  <div class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-            <!-- Projects -->
-            <section class="section" id="projects">
-                <h2 class="section-label">Projects</h2>
-                <div class="project-list">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>Packet Sniffer Tool</h3>
-                            <span class="project-lang">Python</span>
-                        </div>
-                        <p>Script untuk menganalisis lalu lintas jaringan lokal dan mendeteksi anomali pada paket data.</p>
-                    </article>
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3>IoT Secure Gateway</h3>
-                            <span class="project-lang">Linux · IoT</span>
-                        </div>
-                        <p>Implementasi keamanan dasar pada perangkat IoT menggunakan enkripsi MQTT dan firewall berbasis Linux.</p>
-                    </article>
-                </div>
-            </section>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#research" onclick="closeMobile()">Research</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#articles" onclick="closeMobile()">Articles</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
 
-        </main>
+<!-- ── HERO ───────────────────────────────────────────────────────── -->
+<section id="home">
+  <div class="hero-inner">
 
-        <footer>
-            <p>© 2025 Velasco Dendy</p>
-        </footer>
+    <div class="hero-left">
+      <!-- 
+        FOTO PROFIL
+        Pastikan file foto Anda bernama 'foto.jpg' dan diletakkan di dalam folder 'assets'
+      -->
+      <img src="assets/foto.jpg" alt="Foto Profil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 2px solid var(--accent-pale);">
+
+      <div class="hero-eyebrow">Electrical Engineering Student</div>
+      
+      <!-- NAMA ANDA -->
+      <h1 class="hero-name">Velasco<br>Dendy</h1>
+      
+      <p class="hero-title">Universitas Brawijaya</p>
+      <p class="hero-affiliation">AIoT Research Member @ FILKOM Research Group</p>
+      
+      <!-- DESKRIPSI SINGKAT -->
+      <p class="hero-bio">
+        An Electrical Engineering student with interests in Artificial Intelligence, Computer Vision,
+        Embedded Systems, and AIoT. My work focuses on applying machine learning and computer vision
+        techniques to real-world problems while exploring deployment on edge devices and embedded platforms.
+      </p>
+
+      <!-- TOMBOL LINK (Hanya CV dan GitHub) -->
+      <div class="hero-buttons">
+        <a class="btn-primary" href="assets/CV.pdf" download>📄 Download CV</a>
+        <a class="btn-outline" href="https://github.com/Milskysoya" target="_blank">💻 GitHub</a>
+      </div>
+
     </div>
 
-</body>
+    <!-- Terminal block — signature element -->
+    <div class="terminal" id="terminalBlock">
+      <div class="terminal-bar">
+        <div class="t-dot red"></div>
+        <div class="t-dot yel"></div>
+        <div class="t-dot grn"></div>
+        <span class="terminal-label">velasco@arch ~</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <!-- JS fills this -->
+      </div>
+    </div>
 
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── ABOUT ──────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="section-label">Background</div>
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-grid">
+    <div class="about-text fade-up">
+      <p>
+        I am an Electrical Engineering student at Universitas Brawijaya who is passionate about the intersection
+        of Artificial Intelligence, Embedded Systems, and Computer Vision.
+      </p>
+      <p>
+        My interests lie in developing intelligent systems that can operate efficiently on edge devices,
+        combining machine learning models with hardware platforms for practical applications.
+      </p>
+      <p>
+        Beyond academic activities, I actively explore Linux systems, open-source technologies, and
+        research-driven projects to deepen my technical understanding and engineering mindset.
+      </p>
+      <div class="about-tags">
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">AIoT</span>
+        <span class="tag">Edge AI</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Deep Learning</span>
+      </div>
+    </div>
+
+    <div class="about-stats fade-up" style="transition-delay:.1s">
+      <div class="stat-card">
+        <div class="stat-number">3+</div>
+        <div class="stat-desc">Active Projects</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">4</div>
+        <div class="stat-desc">Articles Published</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">YOLOv8</div>
+        <div class="stat-desc">Primary CV Framework</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Arch</div>
+        <div class="stat-desc">Daily Driver OS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── RESEARCH ───────────────────────────────────────────────────── -->
+<section id="research">
+  <div class="section-label">Academic Work</div>
+  <h2 class="section-title">Research Activities</h2>
+
+  <div class="research-card fade-up">
+    <div class="research-card-header">
+      <div class="research-badge">Featured Research · FILKOM Research Group</div>
+      <h3 class="research-title">YOLOv8-seg for Catfish Seed Segmentation</h3>
+      <p class="research-overview">
+        Research focused on implementing and fine-tuning YOLOv8-seg for automated catfish seed size prediction
+        and segmentation. This work combines deep learning model development with practical deployment
+        considerations on embedded hardware, targeting real-world aquaculture measurement challenges.
+      </p>
+    </div>
+
+    <div class="research-card-body">
+      <div class="research-col">
+        <div class="research-col-title">Research Areas</div>
+        <ul>
+          <li>Computer Vision</li>
+          <li>Deep Learning</li>
+          <li>Edge AI</li>
+          <li>AIoT</li>
+        </ul>
+      </div>
+      <div class="research-col">
+        <div class="research-col-title">Objectives</div>
+        <ul>
+          <li>Automate fish seed measurement</li>
+          <li>Improve segmentation accuracy</li>
+          <li>Explore edge device deployment</li>
+        </ul>
+      </div>
+      <div class="research-col">
+        <div class="research-col-title">Future Development</div>
+        <ul>
+          <li>Real-time deployment</li>
+          <li>Edge optimization</li>
+          <li>AIoT system integration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="research-tech-row">
+      <span class="research-tech-label">Stack:</span>
+      <span class="tag">Python</span>
+      <span class="tag">YOLOv8-seg</span>
+      <span class="tag">Orange Pi 4 Pro</span>
+      <span class="tag">Linux</span>
+      <span class="tag">OpenCV</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── PROJECTS ───────────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="section-label">Engineering Work</div>
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card fade-up">
+      <div class="project-icon">🐟</div>
+      <div class="project-name">YOLOv8-seg Catfish Seed Segmentation</div>
+      <p class="project-desc">
+        Implementation and fine-tuning of a segmentation model for catfish seed measurement and prediction.
+        Includes manual dataset labeling, model training, and evaluation on edge hardware.
+      </p>
+      <div class="project-tags">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">YOLOv8</span>
+        <span class="tech-pill">OpenCV</span>
+      </div>
+      <div class="project-links">
+        <a class="btn-sm btn-sm-solid" href="https://github.com/Milskysoya" target="_blank">GitHub</a>
+        <a class="btn-sm btn-sm-ghost" href="#">Documentation</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-up" style="transition-delay:.1s">
+      <div class="project-icon">🚶</div>
+      <div class="project-name">YOLOv8-seg Pedestrian Segmentation</div>
+      <p class="project-desc">
+        Computer vision project focused on pedestrian segmentation using YOLOv8 segmentation models.
+        Explores real-time inference and model accuracy in varied environments.
+      </p>
+      <div class="project-tags">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">YOLOv8</span>
+        <span class="tech-pill">Computer Vision</span>
+      </div>
+      <div class="project-links">
+        <a class="btn-sm btn-sm-solid" href="https://github.com/Milskysoya" target="_blank">GitHub</a>
+        <a class="btn-sm btn-sm-ghost" href="#">Documentation</a>
+      </div>
+    </div>
+
+    <div class="project-card fade-up" style="transition-delay:.2s">
+      <div class="project-icon">💻</div>
+      <div class="project-name">Personal Portfolio Website</div>
+      <p class="project-desc">
+        Development of a responsive portfolio website to showcase projects, research activities,
+        and technical articles. Built with vanilla web technologies with a focus on performance.
+      </p>
+      <div class="project-tags">
+        <span class="tech-pill">HTML</span>
+        <span class="tech-pill">CSS</span>
+        <span class="tech-pill">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a class="btn-sm btn-sm-solid" href="https://github.com/Milskysoya" target="_blank">GitHub</a>
+        <a class="btn-sm btn-sm-ghost" href="#">Live Demo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── ARTICLES ───────────────────────────────────────────────────── -->
+<section id="articles">
+  <div class="section-label">Writing</div>
+  <h2 class="section-title">Technical Writing</h2>
+
+  <div class="articles-grid">
+
+    <a class="article-card fade-up" href="https://medium.com/@velascodendy2" target="_blank">
+      <div class="article-cat">Linux · System Admin</div>
+      <div class="article-title">Aku Coba Install Arch Linux dan Ini Hampir Bikin Aku Nyerah</div>
+      <p class="article-summary">
+        Personal experience documenting the process, challenges, and lessons learned while installing Arch Linux — from partition setup to a working desktop.
+      </p>
+      <div class="article-link">Read on Medium <span>→</span></div>
+    </a>
+
+    <a class="article-card fade-up" href="https://medium.com/@velascodendy2" target="_blank" style="transition-delay:.07s">
+      <div class="article-cat">Linux · Cybersecurity</div>
+      <div class="article-title">Bandit01</div>
+      <p class="article-summary">
+        Learning Linux and cybersecurity fundamentals through OverTheWire Bandit challenges. Walkthrough of early-level SSH and file navigation puzzles.
+      </p>
+      <div class="article-link">Read on Medium <span>→</span></div>
+    </a>
+
+    <a class="article-card fade-up" href="https://medium.com/@velascodendy2" target="_blank" style="transition-delay:.14s">
+      <div class="article-cat">Linux · Cybersecurity</div>
+      <div class="article-title">Bandit02</div>
+      <p class="article-summary">
+        Continuation of cybersecurity learning through practical Linux command-line exercises. File permissions, globbing, and string manipulation.
+      </p>
+      <div class="article-link">Read on Medium <span>→</span></div>
+    </a>
+
+    <a class="article-card fade-up" href="https://medium.com/@velascodendy2" target="_blank" style="transition-delay:.21s">
+      <div class="article-cat">AI Research · Computer Vision</div>
+      <div class="article-title">Ngoding AI Buat Ikan Lele: Kenapa Aku Pilih YOLOv8-seg dan Rela Labeling Manual</div>
+      <p class="article-summary">
+        Discussion of dataset preparation, manual annotation choices, and model selection decisions during an AI research project on catfish seed detection.
+      </p>
+      <div class="article-link">Read on Medium <span>→</span></div>
+    </a>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── CURRENTLY EXPLORING ────────────────────────────────────────── -->
+<section id="exploring">
+  <div class="section-label">In Progress</div>
+  <h2 class="section-title">Currently Exploring</h2>
+
+  <div class="exploring-grid">
+
+    <div class="explore-card fade-up">
+      <div class="explore-icon">⚡</div>
+      <div>
+        <div class="explore-text">YOLOv8-seg Optimization</div>
+        <div class="explore-sub">Model compression & speed tuning</div>
+      </div>
+    </div>
+
+    <div class="explore-card fade-up" style="transition-delay:.05s">
+      <div class="explore-icon">🍊</div>
+      <div>
+        <div class="explore-text">Edge AI on Orange Pi</div>
+        <div class="explore-sub">Embedded inference deployment</div>
+      </div>
+    </div>
+
+    <div class="explore-card fade-up" style="transition-delay:.1s">
+      <div class="explore-icon">📡</div>
+      <div>
+        <div class="explore-text">AIoT System Development</div>
+        <div class="explore-sub">Sensor + ML pipeline integration</div>
+      </div>
+    </div>
+
+    <div class="explore-card fade-up" style="transition-delay:.15s">
+      <div class="explore-icon">🧠</div>
+      <div>
+        <div class="explore-text">TinyML Fundamentals</div>
+        <div class="explore-sub">Microcontroller-scale inference</div>
+      </div>
+    </div>
+
+    <div class="explore-card fade-up" style="transition-delay:.2s">
+      <div class="explore-icon">🐧</div>
+      <div>
+        <div class="explore-text">Linux System Administration</div>
+        <div class="explore-sub">Arch, scripting, system config</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── EXPERIENCE ─────────────────────────────────────────────────── -->
+<section id="experience">
+  <div class="section-label">Background</div>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-list">
+
+    <div class="exp-item fade-up">
+      <div>
+        <div class="exp-org">FILKOM Research Group</div>
+        <div class="exp-role">AIoT Research Member</div>
+        <ul class="exp-bullets">
+          <li>Computer Vision research</li>
+          <li>YOLOv8 implementation</li>
+          <li>Edge deployment experimentation</li>
+        </ul>
+      </div>
+      <div class="exp-type">Research</div>
+    </div>
+
+    <div class="exp-item fade-up" style="transition-delay:.07s">
+      <div>
+        <div class="exp-org">Society of Robotics & AI (SORA)</div>
+        <div class="exp-role">Member</div>
+        <ul class="exp-bullets">
+          <li>Robotics workshops</li>
+          <li>Technical collaboration</li>
+          <li>Innovation projects</li>
+        </ul>
+      </div>
+      <div class="exp-type">Student Org</div>
+    </div>
+
+    <div class="exp-item fade-up" style="transition-delay:.14s">
+      <div>
+        <div class="exp-org">EECCIS</div>
+        <div class="exp-role">Event Division Committee</div>
+        <ul class="exp-bullets">
+          <li>Technical event coordination</li>
+          <li>Team collaboration</li>
+          <li>Logistics management</li>
+        </ul>
+      </div>
+      <div class="exp-type">Committee</div>
+    </div>
+
+    <div class="exp-item fade-up" style="transition-delay:.21s">
+      <div>
+        <div class="exp-org">Kaori's Cafe</div>
+        <div class="exp-role">Operational Staff</div>
+        <ul class="exp-bullets">
+          <li>Teamwork</li>
+          <li>Communication</li>
+          <li>Operational problem solving</li>
+        </ul>
+      </div>
+      <div class="exp-type">Work</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="section-label">Technical</div>
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-group fade-up">
+      <div class="skill-group-title">Programming</div>
+      <div class="skill-items">
+        <span class="skill-item">Python</span>
+        <span class="skill-item">C</span>
+      </div>
+    </div>
+
+    <div class="skill-group fade-up" style="transition-delay:.07s">
+      <div class="skill-group-title">AI & Computer Vision</div>
+      <div class="skill-items">
+        <span class="skill-item">YOLOv8</span>
+        <span class="skill-item">Object Detection</span>
+        <span class="skill-item">Image Segmentation</span>
+        <span class="skill-item">OpenCV</span>
+      </div>
+    </div>
+
+    <div class="skill-group fade-up" style="transition-delay:.14s">
+      <div class="skill-group-title">Embedded & Hardware</div>
+      <div class="skill-items">
+        <span class="skill-item">ESP32</span>
+        <span class="skill-item">Orange Pi</span>
+      </div>
+    </div>
+
+    <div class="skill-group fade-up" style="transition-delay:.21s">
+      <div class="skill-group-title">Systems & Tools</div>
+      <div class="skill-items">
+        <span class="skill-item">Arch Linux</span>
+        <span class="skill-item">Git</span>
+        <span class="skill-item">GitHub</span>
+        <span class="skill-item">VS Code</span>
+        <span class="skill-item">Bash</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ── CONTACT ────────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="section-label">Let's Connect</div>
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-wrapper fade-up">
+    <div class="contact-inner">
+
+      <div class="contact-left">
+        <p class="contact-tagline">Open to research opportunities, internships, and technical collaboration.</p>
+        <p class="contact-desc">
+          Whether you're interested in Computer Vision, AIoT projects, or Embedded AI development —
+          feel free to reach out. I'm always looking to work on meaningful, research-driven problems.
+        </p>
+        <div class="contact-email-row">
+          <span class="contact-email-addr" id="emailAddr">velascodendy2@gmail.com</span>
+          <button class="copy-btn" id="copyEmailBtn" onclick="copyEmail()">Copy</button>
+        </div>
+        <div style="margin-top:1.2rem">
+          <a class="btn-outline" href="mailto:velascodendy2@gmail.com" style="display:inline-block">Send Email →</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+
+        <a class="contact-link-row" href="https://github.com/Milskysoya" target="_blank">
+          <div class="contact-link-icon">🐙</div>
+          <div class="contact-link-text">
+            <div class="contact-link-name">GitHub</div>
+            <div class="contact-link-handle">@Milskysoya</div>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+        <a class="contact-link-row" href="https://www.linkedin.com/in/velasco-dendy-068736360" target="_blank">
+          <div class="contact-link-icon">💼</div>
+          <div class="contact-link-text">
+            <div class="contact-link-name">LinkedIn</div>
+            <div class="contact-link-handle">velasco-dendy</div>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+        <a class="contact-link-row" href="https://medium.com/@velascodendy2" target="_blank">
+          <div class="contact-link-icon">✍️</div>
+          <div class="contact-link-text">
+            <div class="contact-link-name">Medium</div>
+            <div class="contact-link-handle">@velascodendy2</div>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+        <a class="contact-link-row" href="mailto:velascodendy2@gmail.com">
+          <div class="contact-link-icon">📧</div>
+          <div class="contact-link-text">
+            <div class="contact-link-name">Email</div>
+            <div class="contact-link-handle">velascodendy2@gmail.com</div>
+          </div>
+          <span class="contact-link-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-copy">© 2026 Velasco Dendy</div>
+  <div class="footer-tags">Artificial Intelligence · Computer Vision · AIoT · Embedded Systems · Linux</div>
+  <div class="footer-built">Built with HTML, CSS & JavaScript</div>
+</footer>
+
+<!-- ── SCRIPTS ────────────────────────────────────────────────────── -->
+<script src="script.js"></script>
+
+</body>
 </html>
