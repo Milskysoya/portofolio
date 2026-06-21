@@ -1011,3 +1011,20 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* =========================================
+   DEVELOPMENT MODE OVERRIDE
+   Hapus atau comment blok ini saat production
+   ========================================= */
+*, *::before, *::after {
+  /* Mematikan semua transisi dan animasi */
+  transition: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* Memaksa elemen dengan efek fade untuk selalu terlihat selama dev */
+.fade-up {
+  opacity: 1 !important;
+  transform: none !important;
+}
